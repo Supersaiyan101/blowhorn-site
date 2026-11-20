@@ -845,6 +845,8 @@ description: How Blowhorn handles your data, sessions and accounts, in plain lan
 
 Curious what websites can read about your browser? [Blowhorn Tells](https://tells.blowhorn.ai/) is our free "Am I a Bot?" check. It shows the bot-detection and fingerprint signals a site can see, in plain words. The site keeps no copy, and its own page says exactly which outside services see your IP address.
 
+{{< cookie-preferences >}}
+
 ## Report a security issue
 
 If you think you have found a security vulnerability in Blowhorn, send the details privately to [security@blowhorn.ai](mailto:security@blowhorn.ai) rather than opening a public issue. We acknowledge and analyze each report within 10 working days and keep the reporter updated while it is addressed. The [security policy](https://github.com/blowhorn-ai/blowhorn-site/blob/master/SECURITY.md) explains what to report and how fixes are disclosed.
@@ -882,7 +884,7 @@ Google Analytics 4 runs only if you choose Accept in the cookie notice.
 - If you accept: your browser loads Google's tag (gtag.js) from `www.googletagmanager.com` on each page. It sends Google which pages you view, how you arrived, and roughly where you are and what device and browser you use, along with your IP address and the usual request headers. It sets first-party cookies named `_ga` and `_ga_<id>` on blowhorn.ai so that repeat visits can be counted. Advertising storage stays denied.
 - How it's used: Layer5 uses the reports only to improve this site, and doesn't combine them with your Blowhorn account. Google's handling is covered by the [Google privacy policy](https://policies.google.com/privacy) and [how Google uses information from sites that use its services](https://policies.google.com/technologies/partner-sites).
 - If you accept, the site also keeps how you arrived (the campaign tags on the first page's address and the referring site's host, never the full address) in your browser's session storage (`blowhorn-docs-attribution`) and sends it with a few events on the MCP guides: a guide view, a code snippet copy and a click on an install or download link. Closing the tab or withdrawing consent removes it.
-- Your choice is kept in your browser's local storage (`blowhorn-consent`), so the notice doesn't come back. To change it, use **Cookie preferences** at the bottom of any page. If you withdraw consent, the page reloads without the tag. You can also delete the `_ga` cookies in your browser settings.
+- Your choice is kept in your browser's local storage (`blowhorn-consent`), so the notice doesn't come back. To change it, use **Cookie preferences** on the [Trust Center page](/legal/#cookie-preferences). If you withdraw consent, the page reloads without the tag. You can also delete the `_ga` cookies in your browser settings.
 
 ### YouTube videos {#youtube-videos}
 
@@ -1104,15 +1106,15 @@ Telephone: 512-810-8200
 --------------------------------------------------------------------------------
 title: "Integrations"
 url: https://blowhorn.ai/integrations/index.md
-description: Every network Blowhorn reaches. LinkedIn, X, Reddit and Hacker News through your own browser. Slack and Bluesky through their APIs. GitHub reactions on issues, never posts. Coming soon named as such.
+description: Every network Blowhorn reaches. LinkedIn, X, Reddit, Hacker News, YouTube, Instagram, TikTok and Facebook through your own browser. Slack and Bluesky through their APIs. GitHub reactions on issues, never posts.
 --------------------------------------------------------------------------------
-Every network Blowhorn reaches. LinkedIn, X, Reddit and Hacker News through your own browser. Slack and Bluesky through their APIs. GitHub reactions on issues, never posts. Coming soon named as such.
+Every network Blowhorn reaches. LinkedIn, X, Reddit, Hacker News, YouTube, Instagram, TikTok and Facebook through your own browser. Slack and Bluesky through their APIs. GitHub reactions on issues, never posts.
 
 --------------------------------------------------------------------------------
 title: "Action matrix"
 url: https://blowhorn.ai/integrations/actions/index.md
 date: "2026-11-16"
-description: Every Blowhorn action on every platform in one grid. Post, comment, reply, amplify, follow and more on LinkedIn, X, Reddit, Hacker News, Slack, Bluesky and GitHub, with coming-soon platforms marked.
+description: Every Blowhorn action on every platform in one grid. Post, comment, reply, amplify, follow and more on LinkedIn, X, Reddit, Hacker News, Slack, Bluesky, GitHub, YouTube, Instagram, TikTok and Facebook.
 --------------------------------------------------------------------------------
 
 
@@ -1288,22 +1290,18 @@ description: Tutorials, how-to guides, reference, and explanation for the Blowho
   <a class="platform" href="reference/platforms/youtube/">
     <span class="logo-tile"><img src="../assets/platforms/youtube-simple-icons.svg" alt="" width="28" height="28"></span>
     <span class="ui">YouTube</span>
-    <span class="caption">Coming soon</span>
   </a>
   <a class="platform" href="reference/platforms/instagram/">
     <span class="logo-tile"><img src="../assets/platforms/instagram-simple-icons.svg" alt="" width="28" height="28"></span>
     <span class="ui">Instagram</span>
-    <span class="caption">Coming soon</span>
   </a>
   <a class="platform" href="reference/platforms/tiktok/">
     <span class="logo-tile"><img src="../assets/platforms/tiktok-simple-icons.svg" alt="" width="28" height="28"></span>
     <span class="ui">TikTok</span>
-    <span class="caption">Coming soon</span>
   </a>
   <a class="platform" href="reference/platforms/facebook/">
     <span class="logo-tile"><img src="../assets/platforms/facebook-simple-icons.svg" alt="" width="28" height="28"></span>
     <span class="ui">Facebook</span>
-    <span class="caption">Coming soon</span>
   </a>
 </div>
 
@@ -1482,25 +1480,21 @@ Each platform has its own page, listing its supported actions and how each one b
   </a>
   <a class="card docs-card platform-card" href="/docs/reference/platforms/youtube/">
     <span class="h3">YouTube</span>
-    <span>Coming soon - not generally available yet</span>
+    <span>Browser, through the extension</span>
   </a>
   <a class="card docs-card platform-card" href="/docs/reference/platforms/instagram/">
     <span class="h3">Instagram</span>
-    <span>Coming soon - not generally available yet</span>
+    <span>Browser, through the extension</span>
   </a>
   <a class="card docs-card platform-card" href="/docs/reference/platforms/tiktok/">
     <span class="h3">TikTok</span>
-    <span>Coming soon - not generally available yet</span>
+    <span>Browser, through the extension</span>
   </a>
   <a class="card docs-card platform-card" href="/docs/reference/platforms/facebook/">
     <span class="h3">Facebook</span>
-    <span>Coming soon - not generally available yet</span>
+    <span>Browser, through the extension</span>
   </a>
 </div>
-
-YouTube, Instagram, TikTok, and Facebook are coming soon. None of them
-is generally available yet, `blowhorn post --platform` does not list
-them, and each page will list its actions once it ships.
 
 ## Limits
 
@@ -16884,12 +16878,11 @@ No limits are recorded for GitHub.
 --------------------------------------------------------------------------------
 title: "YouTube"
 url: https://blowhorn.ai/docs/reference/platforms/youtube/index.md
-description: YouTube in Blowhorn: coming soon.
+description: What Blowhorn can do on YouTube, and how each action behaves there.
 --------------------------------------------------------------------------------
 
-**Coming soon.** YouTube isn't available in Blowhorn yet. When it is, Blowhorn
-will work on YouTube in your own signed-in Google Chrome, and this page will list what
-it can do there.
+Blowhorn works on YouTube in your own signed-in Google Chrome,
+and this page lists what it can do there.
 
 <!-- BEGIN generated limits: release/scripts/capabilities_docs/build.py; do not edit -->
 
@@ -16918,12 +16911,11 @@ The limits Blowhorn knows for YouTube.
 --------------------------------------------------------------------------------
 title: "Instagram"
 url: https://blowhorn.ai/docs/reference/platforms/instagram/index.md
-description: Instagram in Blowhorn: coming soon.
+description: What Blowhorn can do on Instagram, and how each action behaves there.
 --------------------------------------------------------------------------------
 
-**Coming soon.** Instagram isn't available in Blowhorn yet. When it is, Blowhorn
-will work on Instagram in your own signed-in Google Chrome, and this page will list what
-it can do there.
+Blowhorn works on Instagram in your own signed-in Google Chrome,
+and this page lists what it can do there.
 
 <!-- BEGIN generated limits: release/scripts/capabilities_docs/build.py; do not edit -->
 
@@ -16953,16 +16945,11 @@ The limits Blowhorn knows for Instagram.
 --------------------------------------------------------------------------------
 title: "TikTok"
 url: https://blowhorn.ai/docs/reference/platforms/tiktok/index.md
-description: TikTok in Blowhorn: coming soon.
+description: What Blowhorn can do on TikTok, and how each action behaves there.
 --------------------------------------------------------------------------------
 
-**Coming soon.** TikTok isn't available in Blowhorn yet. When it is, Blowhorn
-will work on TikTok in your own signed-in Google Chrome, and this page will list what
-it can do there.
-
-## Notify me when it ships
-
-{{< signup-form kind="waitlist" topic="tiktok" >}}
+Blowhorn works on TikTok in your own signed-in Google Chrome,
+and this page lists what it can do there.
 
 <!-- BEGIN generated limits: release/scripts/capabilities_docs/build.py; do not edit -->
 
@@ -16994,12 +16981,11 @@ The limits Blowhorn knows for TikTok.
 --------------------------------------------------------------------------------
 title: "Facebook"
 url: https://blowhorn.ai/docs/reference/platforms/facebook/index.md
-description: Facebook in Blowhorn: coming soon.
+description: What Blowhorn can do on Facebook, and how each action behaves there.
 --------------------------------------------------------------------------------
 
-**Coming soon.** Facebook isn't available in Blowhorn yet. When it is, Blowhorn
-will work on Facebook in your own signed-in Google Chrome, and this page will list what
-it can do there.
+Blowhorn works on Facebook in your own signed-in Google Chrome,
+and this page lists what it can do there.
 
 <!-- BEGIN generated limits: release/scripts/capabilities_docs/build.py; do not edit -->
 
